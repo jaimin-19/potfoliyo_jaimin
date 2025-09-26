@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaimin Patel - Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4e57d4;
+            --secondary-color: #32c2b9;
+            --dark-color: #1f2471;
+            --light-color: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .nav-link {
+            font-weight: 500;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
+            color: white;
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary-color);
+        }
+        
+        .skill-card {
+            transition: transform 0.3s ease;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            height: 100%;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .experience-card {
+            border-left: 3px solid var(--primary-color);
+            padding-left: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .project-card {
+            transition: transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            height: 100%;
+            border: none;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .bg-light-custom {
+            background-color: #f8faff;
+        }
+        
+        .text-primary-custom {
+            color: var(--primary-color);
+        }
+        
+        .btn-primary-custom {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary-custom:hover {
+            background-color: var(--dark-color);
+            border-color: var(--dark-color);
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background: var(--dark-color);
+            transform: translateY(-3px);
+        }
+        
+        footer {
+            background: var(--dark-color);
+            color: white;
+        }
+        
+        .text-purple {
+            color: #6f42c1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Jaimin Patel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-3">Jaimin Kiritbhai Patel</h1>
+                    <p class="lead mb-4">Frontend Developer & IT Recruiter</p>
+                    <p class="mb-5">To enhance my professional skills, capabilities and knowledge in an organization which recognizes the value of hard work and trusts me with responsibilities and challenges.</p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a href="#contact" class="btn btn-light btn-lg">Contact Me</a>
+                        <a href="#projects" class="btn btn-outline-light btn-lg">View Projects</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-none d-lg-block">
+                    <div class="text-center">
+                        <div class="bg-white rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 250px; height: 250px;">
+                            <img src="/1711082975228.jpeg" style="border-radius: 100%;  width: 100%;" alt="img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-5" id="skills">
+        <div class="container py-5">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card skill-card">
+                        <div class="card-body text-center p-4">
+                            <i class="fab fa-html5 fa-3x text-danger mb-3"></i>
+                            <h5 class="card-title">HTML</h5>
+                            <p class="card-text">Semantic markup, accessibility, and modern HTML5 features.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card skill-card">
+                        <div class="card-body text-center p-4">
+                            <i class="fab fa-css3-alt fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title">CSS</h5>
+                            <p class="card-text">Responsive design, Flexbox, Grid, and CSS preprocessors.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card skill-card">
+                        <div class="card-body text-center p-4">
+                            <i class="fab fa-js-square fa-3x text-warning mb-3"></i>
+                            <h5 class="card-title">JavaScript</h5>
+                            <p class="card-text">ES6+, DOM manipulation, APIs, and modern JavaScript features.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card skill-card">
+                        <div class="card-body text-center p-4">
+                            <i class="fab fa-react fa-3x text-info mb-3"></i>
+                            <h5 class="card-title">React.js</h5>
+                            <p class="card-text">Components, JSX, state management, and React hooks.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card skill-card">
+                        <div class="card-body text-center p-4">
+                            <i class="fab fa-bootstrap fa-3x text-purple mb-3"></i>
+                            <h5 class="card-title">Bootstrap</h5>
+                            <p class="card-text">Responsive design, components, and Bootstrap utilities.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card skill-card">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-paint-brush fa-3x text-success mb-3"></i>
+                            <h5 class="card-title">Figma</h5>
+                            <p class="card-text">UI/UX design, prototyping, and collaboration with designers.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card skill-card">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-code fa-3x text-secondary mb-3"></i>
+                            <h5 class="card-title">ChatGPT</h5>
+                            <p class="card-text">AI-assisted development and content generation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card skill-card">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-file-alt fa-3x text-primary-custom mb-3"></i>
+                            <h5 class="card-title">Microsoft Office</h5>
+                            <p class="card-text">Word, Excel, PowerPoint for documentation and reporting.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="py-5 bg-light-custom" id="experience">
+        <div class="container py-5">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="experience-card">
+                        <h4 class="text-primary-custom">Frontend Developer</h4>
+                        <h5 class="text-secondary">Code in square</h5>
+                        <p class="text-muted">Dec-2023 - Apr-2024</p>
+                        <ul>
+                            <li>Developed modern, responsive UIs using React and Bootstrap</li>
+                            <li>Ensured cross-browser compatibility and SEO optimization</li>
+                            <li>Collaborated with designers to implement Figma designs</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="experience-card">
+                        <h4 class="text-primary-custom">US IT Recruiter</h4>
+                        <h5 class="text-secondary">Recruiter rider</h5>
+                        <p class="text-muted">Jul-2024 - Oct-2024</p>
+                        <ul>
+                            <li>Managed end-to-end recruitment using LinkedIn and job boards</li>
+                            <li>Conducted interviews and maintained client relationships</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="experience-card">
+                        <h4 class="text-primary-custom">US IT Recruiter (Remote)</h4>
+                        <h5 class="text-secondary">Joinin</h5>
+                        <p class="text-muted">Jan-2025 - Jul-2025</p>
+                        <ul>
+                            <li>Conducted interviews and maintained client relationships</li>
+                            <li>Utilized LinkedIn and job boards for candidate sourcing</li>
+                            <li>Maintained recruitment data and utilized insights to improve candidate selection and client satisfaction</li>
+                            <li>Tools: Microsoft Office Suite, ChatGPT, GitHub</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="py-5" id="projects">
+        <div class="container py-5">
+            <h2 class="section-title">Projects</h2>
+            <p class="text-muted mb-5">
+                A selection of my best work, showcasing frontend development skills, responsive design, and user-friendly UI.
+            </p>
+
+            <div class="row g-4">
+                <!-- Project 1: Event Management Website -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card project-card h-100">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <div class="mb-3 text-center">
+                                <i class="fas fa-calendar-alt fa-3x text-primary-custom"></i>
+                            </div>
+                            <h3 class="card-title h5 text-primary-custom">Event Management Website</h3>
+                            <p class="card-text flex-grow-1">
+                                Built a responsive platform for managing and showcasing events. 
+                                Features include event registration, schedules, and interactive UI for seamless user experience.
+                            </p>
+                            <div class="mb-3">
+                                <span class="badge bg-primary me-1 mb-1">HTML</span>
+                                <span class="badge bg-primary me-1 mb-1">CSS</span>
+                                <span class="badge bg-primary me-1 mb-1">JavaScript</span>
+                                <span class="badge bg-primary mb-1">React</span>
+                            </div>
+                            <a href="" class="btn btn-outline-primary w-100 mt-auto">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Restaurant Website -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card project-card h-100">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <div class="mb-3 text-center">
+                                <i class="fas fa-utensils fa-3x text-success"></i>
+                            </div>
+                            <h3 class="card-title h5 text-primary-custom">Restaurant Website</h3>
+                            <p class="card-text flex-grow-1">
+                                Developed a modern restaurant website with interactive menu display, 
+                                table booking functionality, and mobile-friendly design to enhance customer experience.
+                            </p>
+                            <div class="mb-3">
+                                <span class="badge bg-primary me-1 mb-1">HTML</span>
+                                <span class="badge bg-primary me-1 mb-1">CSS</span>
+                                <span class="badge bg-primary me-1 mb-1">Bootstrap</span>
+                                <span class="badge bg-primary mb-1">JavaScript</span>
+                            </div>
+                            <a href="https://snazzy-rugelach-c2586a.netlify.app/" class="btn btn-outline-primary w-100 mt-auto">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Portfolio Website -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card project-card h-100">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <div class="mb-3 text-center">
+                                <i class="fas fa-laptop-code fa-3x text-info"></i>
+                            </div>
+                            <h3 class="card-title h5 text-primary-custom">Portfolio Website</h3>
+                            <p class="card-text flex-grow-1">
+                                Designed and developed a responsive portfolio website using Bootstrap and modern CSS 
+                                techniques to showcase skills and projects in an elegant way.
+                            </p>
+                            <div class="mb-3">
+                                <span class="badge bg-primary me-1 mb-1">HTML</span>
+                                <span class="badge bg-primary me-1 mb-1">CSS</span>
+                                <span class="badge bg-primary me-1 mb-1">Bootstrap</span>
+                                <span class="badge bg-primary mb-1">JavaScript</span>
+                            </div>
+                            <a href="https://bright-llama-7efbcf.netlify.app/" class="btn btn-outline-primary w-100 mt-auto">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Space for Future Projects -->
+            <div class="text-center mt-5 pt-5">
+                <h3 class="text-muted">🚀 More Projects Coming Soon!</h3>
+                <p class="text-muted">Stay tuned as I continue building creative, responsive, and high-performance web applications.</p>
+                <a href="#contact" class="btn btn-primary-custom mt-3">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="py-5 bg-light-custom" id="education">
+        <div class="container py-5">
+            <h2 class="section-title">Education</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h4 class="card-title text-primary-custom">B.E in IT Engineering</h4>
+                            <h5 class="text-secondary">Saffrony Institute of Technology</h5>
+                            <p class="card-text">Grade: 7.0/10</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title text-primary-custom">HSC (Science)</h4>
+                            <h5 class="text-secondary">Shree Sarvajanik Vidyalaya, Mehsana</h5>
+                            <p class="card-text">Grade: 50%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-5" id="contact">
+        <div class="container py-5">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary-custom">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h4 class="mb-4">Get in touch</h4>
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-map-marker-alt fa-lg text-primary-custom me-3"></i>
+                                <p class="mb-0">Ahmedabad, India</p>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-phone fa-lg text-primary-custom me-3"></i>
+                                <p class="mb-0">+91 9510540208</p>
+                            </div>
+                            <div class="d-flex align-items-center mb-4">
+                                <i class="fas fa-envelope fa-lg text-primary-custom me-3"></i>
+                                <p class="mb-0">jaiminpatel1516453@gmail.com</p>
+                            </div>
+                            <div class="d-flex">
+                                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4">
+        <div class="container text-center">
+            <p class="mb-0">© 2023 Jaimin Patel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
